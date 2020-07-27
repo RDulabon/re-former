@@ -1,3 +1,14 @@
+<%= form_for @user, url: {action: "create"}, html: {class: "user_form"} do |f| %>
+  <%= f.label :email, "Your Email:" %>
+  <%= f.text_field :email, value: "email@example.com" %>
+  <%= f.label :username %> 
+  <%= f.text_field :username, value: "Rufus McDoogle" %>
+  <%= f.label :password %>
+  <%= f.password_field :password, value: "Password" %>
+  <%= f.submit "Submit" %>
+<% end %> 
+
+<% if false %>
 <%= form_tag("/users", method: "POST") do %>
   <%= label_tag(:email, "Email:") %>
   <%= text_field_tag(:email) %>
@@ -9,6 +20,7 @@
   <br>
   <%= submit_tag("Submit") %> 
 <% end %>
+<% end %> 
 
 
 <% if false %>
